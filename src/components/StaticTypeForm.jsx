@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 
 const StaticTypeForm = () => {
 	const [userAnswers, setUserAnswers] = useState({});
-	console.log(userAnswers);
 	const [showResult, setShowResult] = useState(false);
 	const [questions, setQuestions] = useState([]);
 
