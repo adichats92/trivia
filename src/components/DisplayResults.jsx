@@ -8,13 +8,13 @@ const DisplayResults = ({ userAnswers, questions }) => {
 			{questions.map((question) => (
 				<div key={question.id}>
 					<h3>{question.question}</h3>
-					<p>User's Answer: {userAnswers[question.id]}</p>
-					<p>Correct Answer: {question.correctAnswer}</p>
 					{userAnswers[question.id] === question.correctAnswer ? (
-						<p>✅ Correct</p>
+						<p>✅</p>
 					) : (
-						<p>❌ Incorrect</p>
+						<p>❌</p>
 					)}
+					<p>My Answer: {userAnswers[question.id]}</p>
+					<p>Correct Answer: {question.correctAnswer}</p>
 				</div>
 			))}
 		</div>
