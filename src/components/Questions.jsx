@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react';
+import Button from 'react-bootstrap/Button';
 
-const Questions = ({ handleAnswerSelection, setQuestions }) => {
+const Questions = ({
+	handleAnswerSelection,
+	setQuestions,
+	selectedAnswers,
+	unEscapeAllStrings,
+}) => {
 	const [questions, setQuestionsState] = useState([]);
 	useEffect(() => {
 		const fetchedQuestions = [
@@ -20,7 +26,7 @@ const Questions = ({ handleAnswerSelection, setQuestions }) => {
 				question:
 					'The following Spanish provinces are located in the northern area of Spain except:',
 				correctAnswer: 'Murcia',
-				answers: ['Le&oacute;n', 'Asturias', 'Navarre', 'Murcia'],
+				answers: ['Leon', 'Asturias', 'Navarre', 'Murcia'],
 			},
 			{
 				id: 'd52c4a1c-8c33-4308-831b-916fa989ef21',
@@ -65,13 +71,16 @@ const Questions = ({ handleAnswerSelection, setQuestions }) => {
 				answers: ['Tony', 'Oscar', 'Grammy', 'Emmy'],
 			},
 		];
+		const unescapedQuestions = fetchedQuestions.map((question) =>
+			unEscapeAllStrings(question)
+		);
 
-		setQuestionsState(fetchedQuestions);
-		setQuestions(fetchedQuestions);
+		setQuestionsState(unescapedQuestions);
+		setQuestions(unescapedQuestions);
 	}, [setQuestions]);
 
 	return (
-		<div>
+		<div className='mt-3'>
 			{questions.map((question) => (
 				<div key={question.id}>
 					<h3>{question.question}</h3>
@@ -82,14 +91,20 @@ const Questions = ({ handleAnswerSelection, setQuestions }) => {
 									style={{ listStyle: 'none', display: 'inline' }}
 									key={answer}
 								>
-									<button
+									<Button
+										variant={
+											selectedAnswers[question.id] === answer
+												? 'success'
+												: 'secondary'
+										}
 										type='radio'
 										name={question.id}
 										value={answer}
+										className='mx-2 mb-3 mt-1'
 										onClick={() => handleAnswerSelection(question.id, answer)}
 									>
 										{answer}
-									</button>
+									</Button>
 								</li>
 							))}
 					</ul>
