@@ -94,7 +94,7 @@ const Questions = ({
 									<Button
 										variant={
 											selectedAnswers[question.id] === answer
-												? 'success'
+												? 'warning'
 												: 'secondary'
 										}
 										type='radio'

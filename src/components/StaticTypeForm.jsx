@@ -61,7 +61,6 @@ const StaticTypeForm = () => {
 	const handleRestart = () => {
 		setUserAnswers({});
 		setShowResult(false);
-
 		setQuestions(questions);
 	};
 
