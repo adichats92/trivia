@@ -1,15 +1,25 @@
 import { useCallback, useEffect, useState } from 'react';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
+import DynamicTResult from './DynamicTResult';
 
 const DynamicTypeForm = () => {
 	const [data, setData] = useState([]);
 	const [userAnswer, setUserAnswer] = useState([]);
 	const [result, setResult] = useState(false);
+	const [randomQuiz, setRandomQuiz] = useState(null);
+	// const [clickedButton, setClickedButton] = useState({});
+
 	console.log(userAnswer);
 	useEffect(() => {
 		fetchData();
 	}, [userAnswer]);
+	useEffect(() => {
+		if (data.length > 0) {
+			const randomIndex = Math.floor(Math.random() * data.length);
+			setRandomQuiz(data[randomIndex]);
+		}
+	}, [data]);
 
 	const fetchData = () => {
 		axios
@@ -19,9 +29,6 @@ const DynamicTypeForm = () => {
 			})
 			.catch((er) => console.log(er));
 	};
-
-	const randomIndex = Math.floor(Math.random() * data.length);
-	const randomQuiz = data[randomIndex];
 
 	const handleAnswers = useCallback(
 		(questionId, selectedAnswer, selectedQuestion, correctAnswer) => {
@@ -41,8 +48,9 @@ const DynamicTypeForm = () => {
 	const handleShow = () => {
 		setResult(true);
 	};
+
 	const handleRestart = () => {
-		setUserAnswer({});
+		setUserAnswer([]);
 		setResult(false);
 		setData(data);
 	};
@@ -60,7 +68,12 @@ const DynamicTypeForm = () => {
 				<div>
 					{randomQuiz && (
 						<div>
-							<h3 key={randomQuiz.id}>{randomQuiz.question.text}</h3>
+							<h3
+								className='my-5'
+								key={randomQuiz.id}
+							>
+								{randomQuiz.question.text}
+							</h3>
 
 							<ul>
 								{randomQuiz &&
@@ -73,11 +86,7 @@ const DynamicTypeForm = () => {
 											key={answer}
 										>
 											<Button
-												variant={
-													userAnswer[randomQuiz.id] === answer
-														? 'warning'
-														: 'secondary'
-												}
+												variant='secondary'
 												type='radio'
 												name={randomQuiz.id}
 												value={answer}
@@ -107,7 +116,7 @@ const DynamicTypeForm = () => {
 					)}
 				</div>
 			) : (
-				<div>Result</div>
+				<DynamicTResult userAnswer={userAnswer} />
 			)}
 		</div>
 	);
