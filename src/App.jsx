@@ -1,9 +1,8 @@
-// import { useState } from 'react'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-
 import StaticTypeForm from './components/StaticTypeForm';
 import './index.css';
+import DynamicTypeForm from './components/DynamicTypeForm';
 
 function App() {
 	return (
@@ -25,6 +24,13 @@ function App() {
 				className='mx-5 my-5 text-center'
 			>
 				<StaticTypeForm />
+			</Tab>
+			<Tab
+				eventKey='DynamicTForm'
+				title='Expert Trivia'
+				className='mx-5 my-5 text-center'
+			>
+				<DynamicTypeForm />
 			</Tab>
 		</Tabs>
 	);

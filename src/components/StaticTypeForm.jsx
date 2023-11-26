@@ -80,6 +80,7 @@ const StaticTypeForm = () => {
 						setQuestions={setQuestions}
 						selectedAnswers={userAnswers}
 						unEscapeAllStrings={unEscapeAllStrings}
+						questions={questions}
 					/>
 					<Button
 						className='mt-3'

@@ -4,10 +4,11 @@ import Button from 'react-bootstrap/Button';
 const Questions = ({
 	handleAnswerSelection,
 	setQuestions,
+	questions,
 	selectedAnswers,
 	unEscapeAllStrings,
 }) => {
-	const [questions, setQuestionsState] = useState([]);
+	const [questionsState, setQuestionsState] = useState([]);
 	useEffect(() => {
 		const fetchedQuestions = [
 			{

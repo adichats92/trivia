@@ -1,5 +1,3 @@
-import React from 'react';
-
 const DisplayResults = ({ userAnswers, questions }) => {
 	return (
 		<div>
