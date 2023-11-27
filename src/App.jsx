@@ -4,6 +4,7 @@ import StaticTypeForm from './components/StaticTypeForm';
 import './index.css';
 import DynamicTypeForm from './components/DynamicTypeForm';
 import Footer from './components/Footer';
+import Home from './components/Home';
 
 function App() {
 	return (
@@ -18,7 +19,7 @@ function App() {
 					title='Home'
 					className='mx-5 my-5'
 				>
-					Content for Home
+					<Home />
 				</Tab>
 				<Tab
 					eventKey='StaticTForm'
