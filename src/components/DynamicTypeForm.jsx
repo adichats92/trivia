@@ -128,8 +128,8 @@ const DynamicTypeForm = () => {
 	return (
 		<div className='d-flex flex-column justify-content-center align-items-center'>
 			<Button
-				className='fs-1 position-absolute top-0 end-0 mt-5 me-5 px-3 rounded-circle'
-				variant='danger'
+				className='fs-2 position-absolute top-0 end-0 mt-5 me-5 px-3 py-2 rounded-circle'
+				style={{ background: 'orange', borderColor: 'orange' }}
 				onClick={handleRestart}
 			>
 				☠︎

@@ -30,19 +30,22 @@ const Footer = () => {
 							<b>Created by</b>
 							<a
 								className='px-2'
-								href='#'
+								href='https://github.com/adichats92'
+								target='_blank'
 							>
 								Aadil
 							</a>
 							<a
 								className='px-2'
-								href='#'
+								href='https://github.com/naeemsajjad1'
+								target='_blank'
 							>
 								Naeem
 							</a>
 							<a
 								className='px-2'
-								href='#'
+								href='https://github.com/SabinaMB'
+								target='_blank'
 							>
 								Sabina
 							</a>

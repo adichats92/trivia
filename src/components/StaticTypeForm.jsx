@@ -67,7 +67,7 @@ const StaticTypeForm = () => {
 	return (
 		<div className='d-flex flex-column justify-content-center align-items-center mb-5 pb-5'>
 			<Button
-				className='fs-1 position-absolute top-0 end-0 mt-5 me-5 px-3 rounded-circle'
+				className='fs-2 position-absolute top-0 end-0 mt-5 me-5 px-3 py-2 rounded-circle'
 				variant='danger'
 				onClick={handleRestart}
 			>
@@ -83,8 +83,11 @@ const StaticTypeForm = () => {
 						questions={questions}
 					/>
 					<Button
-						className='mt-3'
-						variant='success'
+						className='mt-3 mb-5'
+						style={{
+							background: 'rgba(0, 59, 72, 0.977)',
+							borderColor: 'orange',
+						}}
 						onClick={handleSubmit}
 					>
 						Show Result
