@@ -121,14 +121,18 @@ const DynamicTypeForm = () => {
 
 	const { userScore, totalQuestions } = calculateScore();
 
+	const endShowResult = () => {
+		setResult(false);
+	};
+
 	return (
 		<div className='d-flex flex-column justify-content-center align-items-center'>
 			<Button
-				className='position-absolute top-0 end-0 mt-5 me-5 '
-				variant='info'
+				className='fs-1 position-absolute top-0 end-0 mt-5 me-5 px-3 rounded-circle'
+				variant='danger'
 				onClick={handleRestart}
 			>
-				Restart
+				☠︎
 			</Button>
 			{!result ? (
 				<DynamicTQuiz
@@ -144,6 +148,7 @@ const DynamicTypeForm = () => {
 					isLoading={isLoading}
 					userScore={userScore}
 					totalQuestions={totalQuestions}
+					endShowResult={endShowResult}
 				/>
 			)}
 		</div>

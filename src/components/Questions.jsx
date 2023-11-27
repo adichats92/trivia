@@ -101,7 +101,7 @@ const Questions = ({
 										type='radio'
 										name={question.id}
 										value={answer}
-										className='mx-2 mb-3 mt-1'
+										className='mx-2 mb-3'
 										onClick={() => handleAnswerSelection(question.id, answer)}
 									>
 										{answer}

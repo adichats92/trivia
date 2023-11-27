@@ -1,7 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
-import axios from 'axios';
 import Button from 'react-bootstrap/Button';
-import DynamicTResult from './DynamicTResult';
 import Spinner from 'react-bootstrap/Spinner';
 
 const DynamicTQuiz = ({
@@ -56,6 +53,7 @@ const DynamicTQuiz = ({
 										</li>
 									))}
 							</ul>
+
 							<Button
 								className='mt-3'
 								variant='success'

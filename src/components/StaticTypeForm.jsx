@@ -65,13 +65,13 @@ const StaticTypeForm = () => {
 	};
 
 	return (
-		<div className='d-flex flex-column justify-content-center align-items-center'>
+		<div className='d-flex flex-column justify-content-center align-items-center mb-5 pb-5'>
 			<Button
-				className='position-absolute top-0 end-0 mt-5 me-5 '
-				variant='info'
+				className='fs-1 position-absolute top-0 end-0 mt-5 me-5 px-3 rounded-circle'
+				variant='danger'
 				onClick={handleRestart}
 			>
-				Reset
+				☠︎
 			</Button>
 			{!showResult ? (
 				<div>
