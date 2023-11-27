@@ -96,7 +96,7 @@
 }
 
 .h-content-para {
-	width: 85vw;
+	width: auto;
 	height: 25vh;
 	padding: 1.5rem;
 	position: relative;
@@ -106,11 +106,11 @@
 	font-size: xx-large;
 	text-decoration: dashed;
 	border-radius: 5px;
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
 	margin: 5rem;
-	align-self: auto;
+	align-self: center;
 }
 
 .h-content-list {
@@ -129,6 +129,47 @@
 
 .h-content-item {
 	margin: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+	.h-content-para {
+		width: auto;
+		height: 100vh;
+		padding: 1rem;
+		position: relative;
+		background-color: rgba(0, 59, 72, 0.9);
+		color: orange;
+		overflow: hidden;
+		font-size: xx-large;
+		text-decoration: dashed;
+		border-radius: 5px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		margin: 5rem;
+		align-self: center;
+	}
+	.h-content-list {
+		position: relative;
+		width: auto;
+		padding: 1rem;
+		top: 5rem;
+		height: 10rem;
+		animation-name: scroll;
+		animation-duration: 12s;
+		animation-delay: 2s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		color: wheat;
+		font-size: medium;
+		align-self: center;
+		text-align: center;
+	}
+
+	.h-content-item {
+		margin: 1rem;
+	}
 }
 
 @keyframes scroll {

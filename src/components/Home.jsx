@@ -24,7 +24,7 @@ const Home = () => {
 				to conquer the ultimate trivia challenge
 			</h1>
 			<div className='h-content-para'>
-				<h2 style={{ letterSpacing: '0.5rem', paddingLeft: '4rem' }}>
+				<h2 style={{ letterSpacing: '0.5rem', padding: '2rem' }}>
 					Trivia Fest
 				</h2>
 				<p

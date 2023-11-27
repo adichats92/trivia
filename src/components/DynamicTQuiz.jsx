@@ -35,10 +35,14 @@ const DynamicTQuiz = ({
 										>
 											<Button
 												variant='secondary'
+												style={{
+													borderColor: 'rgba(0, 59, 72, 0.977)',
+													WebkitTextFillColor: 'orange',
+												}}
 												type='radio'
 												name={randomQuiz.id}
 												value={answer}
-												className='mx-2 my-3'
+												className='mx-2 my-3 border-3'
 												onClick={() =>
 													handleAnswers(
 														randomQuiz.id,
@@ -56,7 +60,10 @@ const DynamicTQuiz = ({
 
 							<Button
 								className='mt-3'
-								variant='success'
+								style={{
+									background: 'rgba(0, 59, 72, 0.977)',
+									borderColor: 'orange',
+								}}
 								onClick={handleShow}
 							>
 								See Result

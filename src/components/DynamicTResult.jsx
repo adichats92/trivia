@@ -17,11 +17,15 @@ const DynamicTResult = ({
 			) : (
 				<div className='mb-5 pb-5'>
 					<Button
-						className='fs-1 position-absolute top-0 start-0 mt-5 ms-5 px-3 rounded-circle'
-						variant='info'
+						className='fs-2 position-absolute top-0 start-0 mt-5 ms-5 px-3 py-2 rounded-circle '
+						style={{
+							background: 'rgba(0, 59, 72, 0.977)',
+							borderColor: 'rgba(0, 59, 72, 0.977)',
+							color: 'orange',
+						}}
 						onClick={endShowResult}
 					>
-						🔙
+						⏎
 					</Button>
 					<h2 className='my-3 p-3 border-bottom border-danger'>
 						Review Answers
@@ -29,7 +33,7 @@ const DynamicTResult = ({
 					<p className='my-3 text-success-emphasis'>{`Scored: ${userScore} out of ${totalQuestions}`}</p>
 					{userAnswer.map((q) => (
 						<div
-							className='mb-5 p-5 border border-info-subtle bg-info bg-opacity-10 rounded-end'
+							className='mb-5 p-5 border border-info-subtle bg-info bg-opacity-10 rounded'
 							key={q.id}
 						>
 							<h3>{q.question}</h3>
