@@ -4,10 +4,11 @@ import Button from 'react-bootstrap/Button';
 const Questions = ({
 	handleAnswerSelection,
 	setQuestions,
+	questions,
 	selectedAnswers,
 	unEscapeAllStrings,
 }) => {
-	const [questions, setQuestionsState] = useState([]);
+	const [questionsState, setQuestionsState] = useState([]);
 	useEffect(() => {
 		const fetchedQuestions = [
 			{
@@ -94,13 +95,13 @@ const Questions = ({
 									<Button
 										variant={
 											selectedAnswers[question.id] === answer
-												? 'success'
+												? 'warning'
 												: 'secondary'
 										}
 										type='radio'
 										name={question.id}
 										value={answer}
-										className='mx-2 mb-3 mt-1'
+										className='mx-2 mb-3'
 										onClick={() => handleAnswerSelection(question.id, answer)}
 									>
 										{answer}

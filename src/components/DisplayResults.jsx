@@ -1,8 +1,6 @@
-import React from 'react';
-
 const DisplayResults = ({ userAnswers, questions }) => {
 	return (
-		<div>
+		<div className='mb-5 pb-5'>
 			<h2>Review Answers</h2>
 
 			{questions.map((question) => (
