@@ -1,6 +1,6 @@
 const Home = () => {
 	return (
-		<div>
+		<>
 			<h1
 				style={{
 					textAlign: 'center',
@@ -19,6 +19,7 @@ const Home = () => {
 					lineHeight: '4rem',
 					fontSize: '3rem',
 					letterSpacing: '0.4rem',
+					overflow: 'contain',
 				}}
 			>
 				to conquer the ultimate trivia challenge
@@ -51,7 +52,7 @@ const Home = () => {
 					<div className='h-content-item'>and many more...</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

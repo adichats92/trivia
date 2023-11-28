@@ -27,46 +27,36 @@ const Footer = () => {
 				<div className='content'>
 					<div>
 						<div>
-							<b>Created by</b>
+							<b className='b-tag'>Created by</b>
 							<a
-								className='px-2'
+								className='px-2 a-tag'
 								href='https://github.com/adichats92'
 								target='_blank'
 							>
 								Aadil
 							</a>
 							<a
-								className='px-2'
+								className='px-2 a-tag'
 								href='https://github.com/naeemsajjad1'
 								target='_blank'
 							>
 								Naeem
 							</a>
 							<a
-								className='px-2'
+								className='px-2 a-tag'
 								href='https://github.com/SabinaMB'
 								target='_blank'
 							>
 								Sabina
 							</a>
 						</div>
-						{/* ... Other similar div blocks */}
 					</div>
 					<div>
-						<a
-							className='image'
-							href='https://codepen.io/z-'
-							target='_blank'
-							style={{
-								backgroundImage:
-									'url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg")',
-							}}
-						></a>
-						<p>©2023 Just Kidding</p>
+						<p className='p-tag'>©2023 Just Kidding</p>
 					</div>
 				</div>
 			</div>
-			<svg style={{ position: 'fixed', bottom: '100vh' }}>
+			<svg style={{ position: 'fixed', bottom: '0' }}>
 				<defs>
 					<filter id='blob'>
 						<feGaussianBlur
