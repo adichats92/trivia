@@ -10,17 +10,16 @@
 	display: grid;
 	position: fixed;
 	grid-area: footer;
-	min-height: 3rem;
-
 	bottom: 0;
 	right: 0;
 	left: 0;
+
 	.bubbles {
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
-		height: 1rem;
+		height: 0.5rem;
 		background: var(--footer-background);
 		filter: url('#blob');
 		.bubble {
@@ -38,27 +37,35 @@
 		z-index: 2;
 		display: grid;
 		grid-template-columns: 1fr auto;
-		grid-gap: 4rem;
-		padding: 1rem;
+		grid-gap: 2rem;
+		padding: 0.1rem;
 		background: var(--footer-background);
-		a,
-		p {
+		.a-tag {
 			color: #f5f7fa;
 			text-decoration: none;
+			font-size: 0.7rem;
+			margin-bottom: 0;
+			text-decoration: none;
 		}
-		b {
-			color: white;
+		.b-tag {
+			bottom: 0;
+			font-size: 0.8rem;
+			margin-bottom: 0;
+			padding-bottom: 0;
+			padding-left: 5px;
 		}
-		p {
-			margin: 0;
-			font-size: 0.75rem;
+		.p-tag {
+			font-size: 0.8rem;
+			margin-bottom: 0;
+			padding-bottom: 0;
+			padding-right: 5px;
 		}
 		> div {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			> div {
-				margin: 0.25rem 0;
+				margin: 0.2rem 0;
 				> * {
 					margin-right: 0.5rem;
 				}
@@ -109,7 +116,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	margin: 5rem;
 	align-self: center;
 }
 
@@ -133,9 +139,8 @@
 
 @media screen and (max-width: 1024px) {
 	.h-content-para {
-		width: auto;
-		height: 100vh;
-		padding: 1rem;
+		width: 100%;
+		height: 85vh;
 		position: relative;
 		background-color: rgba(0, 59, 72, 0.9);
 		color: orange;
@@ -147,13 +152,13 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
-		margin: 5rem;
-		align-self: center;
+		padding: 0;
+		margin: 0;
 	}
 	.h-content-list {
 		position: relative;
 		width: auto;
-		padding: 1rem;
+		padding: 0.1rem;
 		top: 5rem;
 		height: 10rem;
 		animation-name: scroll;
