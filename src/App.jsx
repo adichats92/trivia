@@ -5,6 +5,7 @@ import './index.css';
 import DynamicTypeForm from './components/DynamicTypeForm';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import CookieBanner from './components/CookieBanner';
 
 function App() {
 	return (
@@ -36,6 +37,7 @@ function App() {
 					<DynamicTypeForm />
 				</Tab>
 			</Tabs>
+			<CookieBanner />
 			<Footer />
 		</>
 	);
